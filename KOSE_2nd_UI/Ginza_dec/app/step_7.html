@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="google" content="notranslate" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Step 7</title>
+  <link rel="stylesheet" href="js/keyboard/keyboard.min.css" />
+  <link rel="stylesheet" href="css/style.min.css" />
+  <link rel="stylesheet" href="js/keyboard/keyboard.css" />
+</head>
+
+<body class="no-system-msg">
+  <main class="main-contact promocode-page container">
+    <div class="background"></div>
+
+    <div class="logo">
+      <img src="img/logo-kose.png" alt="" />
+    </div>
+
+    <div class="grid-position">
+      <div class="grid-position--top">
+
+        <form action="last.html" method="get">
+
+          <h3 class="hide-desktop ">
+            {{EN: <span class="font-josefin">Please open the camera on your line app and scan the QR code</span>||JP: デバイス画面上に <br> 表示されるQRコード <br> を <br> スキャンしてください}}
+          </h3>
+
+          <h3 class="hide-mobile">
+            {{EN: <span class="font-josefin">Let's become friends with Maison KOSÉ official LINE account to get your sample!</span>||JP: メゾンコーセー公式LINEアカウントを <br>
+            「友だち追加」 でサンプルプレゼント！}}
+          </h3>
+
+          <div class="qr-block hide-mobile">
+            <h5>
+              {{EN: <span class="font-josefin">Please scan the QR code below.</span>||JP: 友だち追加は下記QRコードから}}
+
+            </h5>
+            <div class="qr-code">
+              <img src="./img/QR.png" alt="QR">
+            </div>
+          </div>
+
+          <div class="steps hide-mobile">
+            <div class="step">
+              {{EN: <span class="font-josefin"><span class="num">Step1.</span> After adding friends, please type <span class="promo">「GNZ2012」</span> and send.</span>||JP: <span class="fs-22"><span class="num">Step1.</span> 友だち追加後、トーク画面で 「GNZ2012」 と送信してください</span>}}
+            </div>
+            <div class="step">
+              {{EN: <span class="font-josefin"><span class="num">Step2.</span> Please type in the autoreply promo code below.</span>||JP: <span class="fs-22"><span class="num">Step2.</span> 自動返信で届くプロモーションコードを入力してください</span>}}
+            </div>
+            <div class="step">
+              {{EN: <span class="font-josefin"><span class="num">Step3.</span> Please enter your email.</span>||JP: <span class="fs-22"><span class="num">Step3.</span> メールアドレスを入力してください</span>}}
+            </div>
+            <div class="step">
+              {{EN: <span class="font-josefin"><span class="num">Step4.</span> Click <span class="promo">「GET MY SAMPLE」</span> to receive your sample!</span>||JP: <span class="fs-22"><span class="num">Step4.</span> 「GET MY SAMPLE」をクリックし、サンプルをお受け取りください</span>}}
+            </div>
+          </div>
+
+          <div class="checkboxes hide-mobile">
+            <p>
+              {{EN: <span class="font-josefin">Please read and agree to our <span class="terms terms-btn">Terms of Use</span> before entering your email</span>||JP: ※必ず<span class="terms terms-btn">利用規約</span> をお読みいただきご同意ください}}
+            </p>
+            <div class="wrap-checkbox wrap-checkbox__left-check">
+              <p class="big">
+                {{EN: <span class="font-josefin">I agree to the Terms of Use</span>||JP: 利用規約に同意します}}
+              </p>
+
+              <div class="wrap-checkbox">
+                <input type="checkbox" name="checkbox" class="checkbox" id="terms" />
+                <label for="terms"></label>
+              </div>
+            </div>
+          </div>
+
+          <div class="keyboard keyboard-promo hide-mobile">
+            <h5>
+              {{EN: <span class="font-josefin">Please type in the autoreply promo code below.</span>||JP: 自動返信で届くプロモーションコードを入力してください}}
+            </h5>
+            <input type="text" id="promo" name="promo" class="promo-input" autocomplete="off"
+              placeholder="{{EN: PROMO CODE}}" />
+            <h5>
+              {{EN: <span class="font-josefin">*Type <span class="bold">[GNZ2012]</span> and send to recieve the promo code</span>||JP: ※トーク画面で <span class="bold">「GNZ2012」</span> <br> と入力・送信し、プロモーションコードを取得 <br>してください}}
+            </h5>
+          </div>
+
+          <div class="keyboard keyboard-email hide-mobile">
+            <h3>
+              {{EN: <span class="font-josefin">Please enter your email</span>||JP: メールアドレスを入力してください。}}
+            </h3>
+            <input type="email" id="email" name="email" class="email-input" placeholder="{{EN: email}}" />
+          </div>
+
+          <div class="btns hide-mobile">
+            <label class="btn disabled" id="formSubmitLabel">
+              <input type="submit" id="formSubmit" disabled />
+              {{EN: <span class="font-josefin">GET MY SAMPLE</span>}}
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="grid-position--bottom">
+    </div>
+    </div>
+
+
+    <div class="modal-wrap" id="modal-terms">
+      <div class="modal">
+        <div class="modal__header">{{EN: Terms of Use||JP: 利用規約}}</div>
+
+        <div class="modal__body">
+          <p class="modal__text">
+            {{EN: Kose Provision Co., Ltd. (hereinafter referred to as the "Company") is the Terms of Use (hereinafter referred to as the "Terms") of the service provided by Maison KOSÉ operated by the Company (hereinafter referred to as the "Service"). ".) Is defined as follows.||JP: コーセープロビジョン株式会社 （以下「当社」といいます。）は、当社が運営するMaison KOSÉ (メゾンコーセー)で提供するサービス（以下「本サービス」といいます。）の利用規約(以下「本規約」といいます。)を次のとおり定めます。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: Article 1 (Scope of application of this agreement)||JP: 第1条（本規約の適用範囲）}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: 1. This agreement is the product that we sell on this site by using the website related to this service (hereinafter referred to as "this site") or the provision and use of this service (telephone, sealed letter, FAX, etc.) (hereinafter "" The act of ordering or purchasing a product) is also included in the use of this service, and the same shall apply hereinafter in this agreement.) With respect to the Company and all users defined in Article 3. Applies to. The "User's Guide" URL separately determined by the Company: https://www.maison.kose.co.jp/site/guide/p/guide_top.aspx) (hereinafter referred to as the "User's Guide") Others Various terms of use of this service shall form part of this agreement.||JP: 1. 本規約は本サービスに関するウェブサイト（以下「本サイト」といいます。）もしくは本サービスの提供および利用（電話、封書、FAX等を利用して、当社が本サイト上で販売する商品（以下「商品」といいます。）の注文や購入等を行う行為も本サービスの利用に含まれるものとし、以下本規約において同様とします。）に関し、当社と、第3条で定義するすべての利用者に適用されます。なお、当社が別途定める「ご利用ガイド」URL：https://www.maison.kose.co.jp/site/guide/p/guide_top.aspx）（以下「ご利用ガイド」といいます。）その他本サービスの各種利用条件は、本規約の一部を構成するものとします。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: 2. If the user uses this site or this service, or orders the product from us by telephone, envelope, fax, etc., it is considered that he / she has agreed to comply with this agreement.||JP: 2. 利用者が本サイトもしくは本サービスを利用し、または、電話、封書、FAX等を利用して、商品を当社に対して注文した場合は、本規約に従うことに同意したものとみなします。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: Article 2 (Change of this agreement)||JP: 第2条（本規約の変更）}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: 1. In any of the following cases, we may change all or part of this agreement at our discretion without obtaining the consent of the user.||JP: 1. 当社は以下のいずれかの場合に、当社の裁量により、利用者の承諾を得ることなく、本規約の全部または一部を変更することができるものとします。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: (1) When the change of this agreement is in the general interest of the user||JP: (1) 本規約の変更が、利用者の一般の利益に適合するとき}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: (2) The change of this agreement does not violate the purpose of the contract and is reasonable in light of the necessity of the change, the appropriateness of the changed content, the content of the change and other circumstances related to the change. ||JP: (2) 本規約の変更が、契約をした目的に反せず、かつ、変更の必要性、変更後の内容の相当性、変更の内容その他の変更に係る事情に照らして合理的なものであるとき}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: 2. When changing this agreement according to the preceding paragraph, we will inform you that this agreement will be changed, the content of this agreement after the change and its effective date before the effective date of this agreement after the change (URL: https: We will post it on //maison.kose.co.jp) or notify the user by e-mail.||JP: 2. 当社は前項による本規約の変更にあたり、変更後の本規約の効力発生日前までに、本規約を変更する旨および変更後の本規約の内容とその効力発生日を当社ウェブサイト（URL：https://maison.kose.co.jp）に掲示し、または利用者に電子メールで通知します。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: 3. If the user uses this site or this service after the effective date of this agreement after the change, or orders the product from us by telephone, envelope, fax, etc., the user shall , It is considered that you have agreed to the change of this agreement.||JP: 3. 変更後の本規約の効力発生日以降に利用者が本サイトもしくは本サービスを利用し、または、電話、封書、FAX等を利用して、商品を当社に対して注文したときは、利用者は、本規約の変更に同意したものとみなします。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: Article 3 (Definition of user)||JP: 第3条（利用者の定義）}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: Users include customers who register as members of Maison KOSÉ and use this service as stipulated in Article 6 of this Agreement (customers who are registered as members are called "members"). Refers to all customers who use this service or this site.||JP: 利用者とは、本規約第６条に定めるMaison KOSÉ(メゾンコーセー)の会員登録を行って本サービスを利用されるお客さま（会員登録されたお客さまを「会員」といいます。）を含む本サービスもしくは本サイトを利用するすべてのお客さまをいいます｡}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: Article 4 (Use of this service)||JP: 第4条（本サービスの利用）}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: 1. When using this service, the user shall comply with this agreement and various terms of use of this service (including, but not limited to, "usage guide") separately set by the Company.||JP: 1. 利用者は、本サービスの利用にあたっては、本規約および当社が別途定める本サービスの各種利用条件（「ご利用ガイド」を含みますがこれに限られません。）等に従うものとします。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: 2. The Company shall be able to change or abolish the contents of this service without prior notice to the user or obtaining the consent of the user. The Company shall not be liable for any damages caused by the change or abolition of this service.||JP: 2. 当社は、利用者に事前通知または利用者の承諾を得ることなく、本サービスの内容を変更または廃止することができるものとします。本サービスの変更または廃止により生じた損害について、当社は一切責任を負わないものとします。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: 3. In the event of a suspension of this service, a server down, or any other matter that we deem important, we may send an e-mail containing the details to the e-mail address registered by the member.||JP: 3. 当社は、本サービスの停止、サーバーのダウン、その他当社が重要と判断する事項が生じた場合、会員が登録したメールアドレスにその内容を記載した電子メールを送信できるものとします。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: Article 5 (Purchase of goods)||JP: 第5条（商品の購入）}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: 1. Members can purchase products using this service.||JP: 1. 会員は、本サービスを利用して商品を購入することができます。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: 2. If a member wishes to purchase a product through this service, he / she shall apply for the purchase of the product according to the method specified by the Company, and the sales contract shall be concluded when the Company accepts the application.||JP: 2. 会員が、本サービスによる商品の購入を希望する場合は、当社が指定する方法に従って商品の購入を申し込み、当社が同申込みを承諾することにより売買契約が成立するものとします。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: 3. If a member applies for the purchase of a product through this site, and if the Company approves the application, an e-mail will be sent to the member to the effect that the application will be accepted. When the notification is recorded on the member's mail server, etc., a sales contract for the product shall be concluded between the member and the Company. For information on how to purchase products from this site, please refer to the "User's Guide".||JP: 3. 会員が本サイトを通じて商品の購入の申込みをした場合、当社がその申込みを承諾する場合には、当該会員に対して、同申込みを承諾する旨の電子メールを当該会員宛に発信します。その通知が当該会員のメールサーバーなどに記録された時点で当該会員と当社との間に当該商品に関する売買契約が成立するものとします。本サイトからの商品購入方法については、「ご利用ガイド」をご覧下さい。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: 4. Delivery of products by this service shall be limited to Japan.||JP: 4. 本サービスによる商品の配送は、日本国内に限るものとします。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: 5. When a minor member purchases a product, he / she shall obtain the consent of a legal representative in advance.||JP: 5. 未成年の会員が、商品を購入する場合には、事前に法定代理人の同意を得るものとします。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: Article 6 (Membership registration)||JP: 第6条（会員登録）}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: 1. If you wish to register as a member of Maison KOSÉ, please agree to this agreement and follow the procedures prescribed by our company (For details on how to register as a member from this site, see the "User's Guide"). You shall apply for membership registration according to the above. In addition, membership registration shall be done only by the person himself / herself, and registration by proxy shall not be possible.||JP: 1. Maison KOSÉ(メゾンコーセー)の会員としての登録を希望される方は、本規約に同意のうえ、当社所定の手続き（本サイトからの会員登録方法については、「ご利用ガイド」をご覧下さい。）に従って、会員登録の申込を行うものとします。なお、会員登録は本人のみが行うものとし、代理での登録は行えないものとします。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: 2. The membership registration procedure shall be completed when the Company approves the application set forth in the preceding paragraph. However, please note that in any of the following cases, the Company may not accept the application for membership registration, or even after accepting it, the consent may be revoked.||JP: 2. 会員登録手続きは、前項の申込に対して当社が承諾したときに完了するものとします。ただし、次のいずれかに該当する場合には、当社は会員登録の申込を承諾しないか、あるいは承諾後であっても承諾の取消を行うことがありますので、あらかじめご了承ください。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: (1) When the applicant declares a false fact||JP: (1) 申込者が虚偽の事実を申告した場合}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: (2) When the prohibited acts stipulated in Article 8 are performed||JP: (2) 第 8 条に定める禁止行為を行った場合}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: (3) When it is found that the membership of this service has been revoked in the past due to a violation of this agreement, etc.||JP: (3) 過去に本規約違反等を理由として、本サービスの会員資格の取消等が行われていたことが判明した場合}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: (4) When applying for a new e-mail address registered by a registered member as a login ID||JP: (4) 登録済会員が登録している電子メールアドレスをログイン用の ID として新規に申し込む場合}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: (5) When applying for an e-mail address that is not in your name as a login ID||JP: (5) 自己名義でない電子メールアドレスをログイン用の ID として申し込む場合}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: (6) When applying on behalf of a third party||JP: (6) 第三者からの委託を受けて申し込む場合}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: (7) If you are under 16 years old||JP: (7) 16 歳未満の場合}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: (8) If you live outside Japan||JP: (8) 日本国外にお住まいの場合}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: (9) In the case of a corporation||JP: (9) 法人の場合}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: (10) In addition, when the Company deems it inappropriate as a member||JP: (10) その他、当社が会員として不適当と判断した場合}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: Article 7 (withdrawal)||JP: 第7条（退会）}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: If a member wishes to withdraw from Maison KOSÉ, he / she can withdraw by following the procedure below. However, if you have an unpaid order, you will not be able to cancel your membership until the unpaid amount has been paid.||JP: 会員は、Maison KOSÉ(メゾンコーセー)からの退会を希望する場合には、次の手続きに従い、退会できるものとします。ただし、未入金のご注文がある場合、未入金分の支払が完了するまでは、退会手続きを行うことはできません。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: (1) Members registered as members from this site (hereinafter referred to as "Web members") can withdraw from the membership by clicking "Member registration information → Withdrawal" on My Page.||JP: (1) 本サイトから会員登録された会員（以下「Web会員」といいます。）は、マイページ内の「会員登録情報 → 退会」より退会お手続きが可能です。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: (2) If you are not a registered Web member, please call the Communication Center (0120-018-169).||JP: (2) Web会員にご登録いただいていない会員は、コミュニケーションセンター（0120-018-169）へお電話ください。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: Article 8 (Prohibited matters)||JP: 第8条（禁止事項）}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: The following acts are prohibited when using this service. In the unlikely event that these are violated, the Company may suspend the provision of this service or refuse further transactions. In addition, the user's In the event of damage to the Company or a third party due to a violation, the user shall be liable for the damage.||JP: 本サービスの利用に際して、次の行為を禁止します｡ 万一、これらに違反された場合、当社は本サービスの提供を停止したり、以後の取引をお断りすることがあります｡また、利用者の違反行為により当社または第三者に損害が生じた場合は、利用者がその損害を賠償する責任を負うものとします｡}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: (1) The act of applying for false content when entering information||JP: (1) 情報入力の際に虚偽の内容を申請する行為}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: (2) Acts that interfere with the operation of this service, or other acts that may interfere with this service||JP: (2) 本サービスの運営を妨げる行為、その他本サービスに支障をきたすおそれのある行為}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: (3) Acts of using this service by illegally using a credit card||JP: (3) クレジットカードを不正使用して本サービスを利用する行為}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: (4) Unauthorized use of login ID (email address) or password||JP: (4) ログイン用ID（電子メールアドレス）またはパスワードを不正に使用する行為}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: (5) Acts that impair the rights, interests, honor, etc. of other users, third parties, or our company, or acts that may cause them.||JP: (5) 他の利用者、第三者、もしくは当社の権利、利益、名誉等を損ねる行為、またはそれらのおそれのある行為}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: (6) Acts that infringe or may infringe the trademark rights, copyrights, privacy or other rights of other users, third parties, or our company.||JP: (6) 他の利用者、第三者、もしくは当社の商標権、著作権、プライバシーその他の権利を侵害する行為、またはそれらのおそれのある行為}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: (7) Acts that violate public order and morals or other acts that violate laws and regulations, or acts that may cause them||JP: (7) 公序良俗に反する行為その他法令に違反する行為、またはそれらのおそれのある行為}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: (8) Acts such as transferring the status, rights or obligations as a member to a third party, buying and selling, changing the name, setting a pledge, or providing other collateral.||JP: (8) 会員としての地位、権利または義務を第三者に譲渡、売買、名義変更、質権の設定その他の担保に供する等の行為}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: (9) Sending or writing harmful computer programs, etc.||JP: (9) 有害なコンピュータプログラム等の送信または書き込み行為}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: (10) Posting or sending the same or similar message on this service or this site, or any other act that we judge to be spam||JP: (10) 同一または類似のメッセージを本サービスまたは本サイト内に投稿、または送信する行為、その他当社がスパムと判断する行為}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: (11) Other acts that the Company deems inappropriate||JP: (11) その他、当社が不適当と判断する行為}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: Article 9 (suspension of provision of this service)||JP: 第9条（本サービスの提供停止）}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: 1. The Company shall be able to suspend the provision of this service without prior notice to the user if the user falls under any of Article 8 or any of the following items. I will.||JP: 1. 当社は、利用者が第8条のいずれかに該当する場合、または以下の項目のいずれかに該当する場合、利用者に事前通知することなく本サービスの提供の停止を行うことができるものとします。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: (1) When it is found that this agreement has been violated in the past||JP: (1) 過去に本規約に違反していることが判明した場合}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: (2) When there is a delay in the performance of payment obligations such as fees related to this service or other defaults||JP: (2) 本サービスに関する料金等の支払債務の履行遅延その他の不履行があった場合}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: (3) When the credit card company designated by the user notifies that the credit card has not been fulfilled.||JP: (3) 利用者指定のクレジットカード会社からカード与信不履行の旨の連絡があった場合}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: (4) When it becomes clear that the user's ability to pay has been compromised||JP: (4) 利用者の支払い能力が危うくなったと認めうる事情が判明した場合}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: (5) When the product is out of stock and cannot be delivered easily||JP: (5) 商品が品切れとなり、容易にお届けできない場合}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: (6) When the delivery address is unknown or cannot be delivered due to a long absence||JP: (6) 届先不明、長期不在でお届けできない場合}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: (7) If you violate this agreement||JP: (7) その他本規約に違反した場合}}
+          </p>
+
+
+          <p class="modal__text">
+            {{EN: 2. Even if the user or a third party suffers disadvantages or damages due to the measures set forth in the preceding paragraph, the Company shall not be liable for any damages caused by reasons not attributable to the Company. Shall not. For damages caused by our negligence, we shall be liable only for damages that occur directly and normally. However, if the Company has intentional or gross negligence, the scope of damages liable is not limited to this.||JP: 2. 当社が前項の措置をとったことで、当該利用者または第三者に不利益、損害が発生したとしても、当社の責めに帰さない理由から生じた損害については、当社は一切の責任を負わないものとします。当社の過失に基づいて生じた損害については、直接かつ通常生じる範囲の損害に限り責任を負うものとします。ただし、当社に故意または重過失がある場合、責任を負う損害の範囲はこの限りでありません。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: Article 10 (suspension of this service)||JP: 第10条（本サービスの停止）}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: In order to keep the operation of this service good, we may suspend all or part of the provision of this service without notifying the user in advance if any of the following items apply. I shall be able to do it.||JP: 当社は、本サービスの運営を良好に保つために、次の各号のいずれかに該当する場合、利用者に事前に通知を行うことなく本サービスの提供の全部あるいは一部を停止することができるものとします。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: (1) When necessary for regular system maintenance and emergency maintenance||JP: (1) システムの定期保守および緊急保守のために必要な場合}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: (2) When it becomes difficult to operate the system due to fire, power outage, obstruction by a third party, etc.||JP: (2) 火災、停電、第三者による妨害行為等によりシステムの運用が困難になった場合}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: (3) In addition, when we determine that it is unavoidable to stop the system||JP: (3) その他、止むを得ずシステムの停止が必要と当社が判断した場合}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: The Company shall not be liable for any disadvantage or damage caused to the user or a third party due to the situation set forth in the preceding paragraph.||JP: 前項の事態に伴い、利用者または第三者に不利益、損害が発生したとしても、当社は一切の責任を負わないものとします。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: Article 11 (Management of user information)||JP: 第11条（利用者情報の管理）}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: The Company appropriately presents the information registered by the user and the user information that the Company has learned in connection with the use of this service based on the "Personal Information Protection Policy" established by the Company on this site. It shall be handled and may be shared with our group companies in accordance with the "Personal Information Protection Policy".||JP: 当社は、利用者によって登録された情報、および本サービスの利用に関連して当社が知り得た利用者の情報を、本サイト上に提示する当社の定める「個人情報保護方針」に基づき適切に取扱うものとし、また、「個人情報保護方針」に従い、当社グループ会社と共同利用できるものとします。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: Article 12 (Provision of information, etc.)||JP: 第12条（情報等の提供）}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: 1. If any of the following items applies to the text, drawings, and other information (hereinafter referred to as "information, etc.") provided by the user on this service and this site, we will use our company. At our discretion, it may be deleted without notifying the user in advance.||JP: 1. 当社は、利用者が本サービスおよび本サイトで提供した文章、図面、その他の情報（以下「情報等」といいます。）について、次の各号の一つにでも該当するときは、当社の判断によって、事前に当該利用者に通知することなくこれを削除することができるものとします。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: (1) When the Company recognizes that the information clearly infringes the copyright or other rights of the Company or a third party, or damages the honor or credibility of the Company or a third party.||JP: (1) 当該情報が当社もしくは第三者の著作権その他の権利を明らかに侵害し、または当社もしくは第三者の名誉もしくは信用を毀損していると当社が認める場合}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: (2) When the Company receives a warning from the third party that the information infringes the copyright or other rights of the third party, or damages the honor or credibility of the third party.||JP: (2) 当該情報が第三者の著作権その他の権利を侵害し、または第三者の名誉もしくは信用を毀損しているとの警告を当社が当該第三者から受け取った場合}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: (3) When the prohibited items stipulated in Article 8 are applicable||JP: (3) 第8条に定める禁止事項に該当する場合}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: (4) When the Company admits that it violates the law||JP: (4) 法令に違反していると当社が認める場合}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: 2. The legal liability arising from the provision of the information, etc. in the preceding paragraph shall be borne by the user who provided the information, and the Company shall not be liable at all. In addition, the user shall be liable to the Company for all damages caused to the Company by providing such information.||JP: 2. 前項の情報等を提供したことにより生じる法的責任は、すべて当該情報を提供した利用者が負担し、当社は一切の責任を負わないものとします。また、利用者は、当該情報等の提供により当社に生じた全ての損害について、当社に対して賠償する責任を負うものとします。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: 3. If the information provided by the user falls under any of the items in Paragraph 1, the Company shall, at its own discretion, without any prior notice and consent, the user shall use all of this service or its own. You may refuse to access some of them.||JP: 3. 利用者が提供した情報等が第1項各号のいずれかに該当する場合、当社は、自らの裁量で、何らの事前通知および承諾を得ることなく、当該利用者が本サービスの全部またはその一部にアクセスすることを拒否することができるものとします。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: Article 13 (Copyright / Trademark Right)||JP: 第13条（著作権・商標権）}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: 1. All copyrights, trademark rights, and other intellectual property rights related to the content (documents, images, programs, etc.) provided by the Company on this service and this site belong to the Company, the content providers, or licensors who have their legitimate title. Attribution. The user acknowledges in advance that these contents are protected by laws such as copyright law and trademark law, and cannot be copied or diverted without the permission of the right holder.||JP: 1. 本サービスおよび本サイトで当社が提供するコンテンツ（文書、画像、プログラム等）に関する著作または商標権、その他の知的財産権は、すべて当社もしくはコンテンツ提供者またはそれらの正当な権原を有するライセンサーに帰属します。利用者は、これらのコンテンツは、著作権法、商標法等の法律で保護されており、権利者の許可なく複製、転用することはできないことを予め了承するものとします。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: 2. Regarding the information provided by the user, when the user provides it to this service, the user has all the copyrights (copy, public transmission, automatic public transmission, transmission enablement, transfer, loan, etc. in Japan and overseas). The rights of Articles 27 and 28 of the Copyright Law shall be included.) Other rights under the Copyright Law (including the right of reuse from the Company to a third party) shall be given to the Company as follows ( In accordance with the conditions 1) to (3), you are permitted to use it in any way free of charge. The user expresses and guarantees that the rights and interests of the Company based on this section will be secured even if the above rights related to information etc. are transferred, lent, licensed or otherwise disposed of to a third party. Shall be.||JP: 2. 利用者が提供した情報等について、利用者は、利用者が本サービスに提供した時点で、国内外における複製、公衆送信、自動公衆送信、送信可能化、譲渡、貸与等の全ての著作権（著作権法第27条、第28条の権利を含むものとします。）その他の著作権法上の権利（当社から第三者に対する再利用権を含みます。）を、当社に対して、以下(1)～(3)の条件に従い、無償で任意の方法で利用することを許諾したものとします。利用者は、第三者に対して情報等にかかる上記各権利を譲渡、貸与、許諾その他処分した場合であっても、本項に基づく当社の権利および利益が確保されることを表明及び保証するものとします。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: (1) The user shall guarantee that the provided information does not infringe the copyright, portrait right, etc. of a third party, or slander the third party. In addition, when using the copyrighted work of a third party, all necessary rights processing with the third party shall be completed in advance.||JP: (1) 利用者は、提供した情報等が第三者の著作権、肖像権等の権利を侵害し、または第三者を誹謗中傷したりするものではないことを保証するものとします。また、第三者の著作物等を使用する場合には、あらかじめ当該第三者との間の必要なすべての権利処理を完了するものとします。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: (2) Information posted by the user by the Company or a third party licensed by the Company to be provided on the Company's website or to the website operated by the third party, e-mail newsletter, etc. It may be used in various other ways such as posting on media, and in that case, summarizing or excerpting the text, modifying the content based on the posting standards of the Company or the third party concerned, or omitting the display of the author. The user shall understand in advance that there may be cases. In addition, the user is not limited to the cases specifically described in this section, but the moral rights of the author (publication right, etc.) relating to the information provided by the user to the Company or a third party designated by the Company. The right to display the name and the right to maintain the sameness) shall not be exercised.||JP: (2) 当社または当社から再利用許諾を受けた第三者が、利用者が投稿した情報等を、当社のホームページ内や当該第三者が運営するウェブサイトへのコンテンツ提供、メールマガジン、あらゆる媒体への掲載その他の様々な方法で利用する場合があること、および、その際、文章の要約、抜粋、当社もしくは当該第三者の掲載基準に基づく内容の修正または著作者の表示の省略をする場合があることを、利用者は予め了解するものとします。また、利用者は、本項に具体的に記載された場合に限定せず、当社または当社が指定する第三者に対し、利用者が提供した情報等にかかる著作者人格権（公表権・氏名表示権・同一性保持権）を行使しないものとします。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: (3) The license period for information, etc. based on this section shall continue as long as the copyright of the provided information, etc. continues, and no consideration for copyright royalties, royalties, etc. shall be incurred.||JP: (3) 本項に基づく情報等の利用許諾期間は、提供した情報等の著作権が存続する限り継続するものとし、著作権使用料、ロイヤリティ等の対価は一切発生しないものとします。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: 3. We may use the information provided by users as reference materials for product development and marketing data of our company and our group companies, or provide it to third parties after removing personally identifiable information. The user acknowledges that there is.||JP: 3. 当社は利用者が提供した情報等を、個人を特定できる情報を除去したうえで、当社および当社グループ会社の製品開発の参考資料やマーケティングデータ等として活用し、または第三者に提供する場合があることを、利用者は、予め了承するものとします。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: Article 14 Disclaimer||JP: 第14条 免責事項}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: 1. The Company shall provide this service as it is, and may make any warranty or representation regarding the reliability, truthfulness, legality, etc. of the content, whether express or implied, as far as the applicable law permits. It shall not be done.||JP: 1. 当社は、本サービスを現状有姿で提供するものとし、その内容の信頼性、真実性、適法性等について、明示または黙示を問わず、適用される法律の許す限りにおいて、いかなる保証または表明も行わないものとします。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: 2. By using this service, the user is deemed to have agreed to do so at his / her own risk. Unless otherwise agreed between the user and the Company, the Company may cause the user or a third party other than the user by using the Service or by not being able to use the Service. We shall not be liable for any damages, losses, disadvantages, etc.||JP: 2. 利用者は、本サービスの利用にあたって、すべてご自分の責任においてこれを行うことに同意されたものとみなされます。当社は、利用者と当社との間に別段の合意がある場合を除き、本サービスの利用によって、または本サービスを利用できなかったことによって、利用者または利用者以外の第三者に生じるあらゆる損害、損失、不利益等に関して責任を負わないものとします。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: 3. Our company interrupts, delays, cancels, loses data, damages caused by unauthorized access to data, and other damages caused to users regarding this service due to a failure of the communication line or computer that provides this service. We do not take any responsibility for.||JP: 3. 当社は、本サービスを提供する通信回線やコンピュータ等の障害により生じたシステムの中断・遅滞・中止・データの消失、データへの不正アクセスにより生じた損害、その他本サービスに関して利用者に生じた損害について、一切責任を負わないものとします。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: 4. The Company shall not be liable for any troubles that occur between users or between users and third parties regarding the use of this service.||JP: 4. 当社は、本サービスの利用に関して利用者間、利用者と第三者との間で生じたトラブルについて、一切責任を負わないものとします。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: 5. Members shall strictly manage the login ID (email address) and password registered when using this service so that they will not be known to third parties. In this service, if it is confirmed that the combination of login ID (email address) and password matches by the method prescribed by the Company, it will be considered to be used by the member himself / herself, and in such cases, plagiarism, unauthorized use, etc. Even if it is used by a third party other than the member himself / herself due to circumstances, the Company shall not be liable for any damage caused by such use.||JP: 5. 会員は、本サービスの利用にあたって登録したログイン用ID（電子メールアドレス）およびパスワードを、第三者に知られないよう厳重に管理するものとします。本サービスにおいて、ログイン用 ID（電子メールアドレス）とパスワードの組み合わせが一致することが当社所定の方法により確認された場合、会員本人による利用とみなされるものとし、かかる場合、盗用、不正使用その他の事情により会員本人以外の第三者による利用であっても、当該利用により生じた損害について、当社は一切責任を負わないものとします。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: 6. We will notify the user by sending a notification to the e-mail address, telephone / fax or address that the user has entered or registered in advance, and the delivery of the product will be made by the user when purchasing the product. It shall be done by delivering the product to the destination specified in. For damages caused by the user not registering the change even though the registration information has changed, we will do it. Takes no responsibility.||JP: 6. 当社は、利用者に対する通知は、利用者が予め入力あるいは登録しているメールアドレス、電話・FAXまたは住所へ通知を発信することにより、また、商品のお届けは、商品購入の際、利用者に指示された送付先に商品を配送等することにより、行うものとします｡利用者が、その登録情報に変更が生じたにもかかわらず変更登録を行わなかったことにより生じた損害について、当社は一切責任を負わないものとします。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: 7. The user shall bear the cost of installing computer equipment and communication equipment necessary for the user to use this service, the telephone charge required to use this service, the communication charge, etc.||JP: 7. 利用者が本サービスを利用するのに必要なコンピュータ機器および通信機器等の設置に関する費用、本サービスを利用するために要した電話料金、通信料金等は、利用者が自ら負担するものとします。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: 8. Notwithstanding the disclaimers in this Article, we shall be liable for damages caused by our negligence only to the extent that they occur directly and normally. However, if the Company has intentional or gross negligence, the scope of damages liable is not limited to this.||JP: 8. 本条の各免責規定にかかわらず、当社の過失に基づいて生じた損害については、直接かつ通常生じる範囲の損害に限り責任を負うものとします。ただし、当社に故意または重過失がある場合、責任を負う損害の範囲はこの限りでありません。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: Article 15 link||JP: 第15条 リンク}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: The user shall acknowledge the following in advance.||JP: 利用者は、以下について、予め了承するものとします。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: 1. We do not check the contents of third-party websites or pages linked to this site or from this site. Therefore, we do not guarantee the contents of the websites and pages of third parties that link to this site or from this site, and we do not take any responsibility.||JP: 1. 当社では本サイトから、もしくは本サイトへリンクしている第三者のウェブサイトやページの内容についての確認を行っておりません。したがって、当社は、本サイトから、もしくは本サイトへリンクしている第三者のウェブサイトやページの内容について何ら保証するものではなく、一切責任を負わないものとします。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: 2. When setting a link to this site, it is necessary to inform us of your name, contact information (address, telephone number, email address) and the URL of the website to set the link. In addition, we may refuse the link depending on the content of the website and the method of linking, such as when we think that there is a risk of damaging our corporate image or the purpose of this site may not be conveyed correctly. If we decline the link, the user must not set the link, and the set link shall be deleted immediately.||JP: 2. 本サイトにリンクを設定するときは、お名前、ご連絡先（住所･電話番号･メールアドレス）およびリンクを設定するウェブサイトのURLを明記の上、当社までお知らせいただく必要があります。なお、当社の企業イメージを損ねるおそれもしくは本サイトの趣旨が正しく伝わらないおそれがあると思料する場合等、ウェブサイトの内容やリンクの方法によっては、リンクをお断りすることがあります。当社がリンクをお断りした場合、利用者はリンクを設定してはならず、設定したリンクについては直ちに削除するものとします。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: Article 16 (About cookies and web beacons)||JP: 第16条（クッキー（Cookie）、ウェブビーコン（web beacon）について）}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: 1. We may use cookies in order to improve the convenience of this site and make it more convenient for users to browse. A cookie is a text file that is recorded on the hard disk of your computer by a web server. The information obtained through cookies does not include any information that can identify the individual user. In addition, we may have a company that outsources advertisement distribution business store and refer to cookies on this site via the website of the outsourced company.||JP: 1. 当社は、本サイトの利便性を高め、利用者により便利に閲覧していただくため、クッキー（Cookie）を利用する場合があります。クッキー（Cookie）とは、Webサーバーによって利用者がご使用のコンピューターのハードディスクに記録されるテキストファイルをいいます。なお、クッキー（Cookie）を通じて取得する情報には、利用者個人を識別できる情報は一切含まれません。なお、当社は、広告配信業務を委託する会社に、当該委託先会社のウェブサイトを経由して、本サイトのクッキー（Cookie） を保存させ、参照させる場合があります。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: 2. Cookies are information recorded on your computer's hard disk, but you can usually disable them by setting your browser. If you set to disable cookies, you agree in advance that this site may not function properly or you may not be able to use this service.||JP: 2. クッキー（Cookie）はコンピューターのハードディスクに記録される情報ですが、通常は利用者のブラウザーの設定により、無効にすることができます。クッキー（Cookie）を無効化する設定をされた場合、本サイトが適切に機能しなくなったり、本サービスがご利用出来ない場合があることをあらかじめ承諾いただくものとします。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: 3. We may use a function called web beacon on this site in order to collect information about the use of this site by users and use it to improve services. We do not collect personal information of users by web beacons. In addition, the user can refuse the acquisition of information regarding the use of this site by web beacons by setting to disable cookies.||JP: 3. 当社は、本サイトにおいて、利用者の本サイトの利用に関する情報を収集し、サービス向上に利用するため、ウェブビーコン（web beacon）という機能を使用する場合があります。ウェブビーコン（web beacon）によって利用者の個人情報を取得することはありません。なお、利用者はクッキー（Cookie）を無効化する設定をすることにより、ウェブビーコン（web beacon）による本サイトの利用に関する情報の取得を拒否することができます。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: Article 17 Governing law and consensus jurisdiction||JP: 第17条 準拠法および合意管轄}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: The interpretation and application of this agreement and various terms of use applicable to this service shall be governed by Japanese law. In addition, if there is a need for a proceeding regarding the use of this agreement and this service, the Tokyo District Court shall be the exclusive agreement jurisdictional court of the first instance.||JP: 本規約および本サービスに適用される各種利用条件等の解釈および適用は、日本法に準拠します。また、本規約および本サービスの利用等に関して訴訟の必要が生じた場合には、東京地方裁判所を第一審の専属的合意管轄裁判所とします。}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: About recommended environment||JP: 推奨環境について}}
+          </p>
+
+          <p class="modal__text">
+            {{EN: In order to use this service safely and comfortably, we recommend using the latest version of each browser.
+                For details on the latest version, please check the site of each browser.||JP: 本サービスを安全で快適にご利用いただくために、各ブラウザの最新バージョンの利用を推奨しています。 最新バージョンについての詳細は、各ブラウザのサイトでご確認ください。}}
+          </p>
+        </div>
+        <!-- end body -->
+
+        <div class="modal__footer">
+          <button type="button" class="modal_btn ui-close-modal">Ok </button>
+        </div>
+      </div>
+      <!-- end modal -->
+    </div>
+
+  </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+  <script src="js/keyboard/jquery.keyboard.min.js"></script>
+  <script src="js/scripts.min.js"></script>
+</body>
+
+</html>

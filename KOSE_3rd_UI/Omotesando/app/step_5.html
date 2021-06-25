@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="google" content="notranslate" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Step 4</title>
+  <link rel="stylesheet" href="css/style.min.css" />
+</head>
+
+<body>
+  <main class="main-contact container step-4">
+    <div class="background"></div>
+
+    <div class="logo">
+      <img src="img/logo-kose.png" alt="" />
+    </div>
+
+    <div class="grid-position">
+      <div class="grid-position--top">
+
+        <form action="step_6.html" method="get" class="question question__column-2">
+          <input type="hidden" name="question" data-question="question" value="Select the one that you wish for" />
+
+          <h3>
+            {{EN: Select the one that you wish for||JP: 願いが１つ叶うなら？}}
+          </h3>
+
+          <ul class="step-num-block">
+            <li>1</li>
+            <li>2</li>
+            <li class="active">3</li>
+            <li>4</li>
+          </ul>
+
+          <div class="btns">
+
+            <label class="btn btn__card">
+              <input type="submit" name="answer" value="Being a lovable pet in my next life" hidden />
+
+              <img src="./img/Q2_1.jpg" alt="Being a lovable pet in my next life">
+              <p>
+                {{EN: Being a lovable pet in my next life||JP: みんなに愛されるペットに生まれ変わる}}
+              </p>
+            </label>
+
+            <label class="btn btn__card">
+              <input type="submit" name="answer" value="Traveling back in time" hidden />
+
+              <img src="./img/Q2_2.jpg" alt="Traveling back in time">
+              <p>
+                {{EN: Traveling back in time||JP: 過去へタイムスリップ}}
+              </p>
+            </label>
+
+            <label class="btn btn__card">
+              <input type="submit" name="answer" value="Being invisible & playing pranks" hidden />
+
+              <img src="./img/Q2_3.jpg" alt="Being invisible & playing pranks">
+              <p>
+                {{EN: Being invisible & playing pranks||JP: 透明人間になってイタズラし放題}}
+              </p>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </main>
+  <script src="./libs/jquery/jquery-1.11.1.min.js"></script>
+  <script src="js/scripts.min.js"></script>
+</body>
+
+</html>

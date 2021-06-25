@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="google" content="notranslate" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Step 6</title>
+  <link rel="stylesheet" href="css/style.min.css" />
+</head>
+
+<body>
+  <main class="main-contact step-6 container">
+    <div class="background"></div>
+
+    <div class="logo">
+      <img src="img/logo-kose.png" alt="" />
+    </div>
+
+    <div class="grid-position">
+      <div class="grid-position--top">
+
+        <form action="step_8.html" method="get" class="product">
+          <input type="hidden" name="question" value="product" />
+
+          <h3>
+            {{EN: <span class="font-josefin">Your perfect match is…</span>||JP:あなたにぴったりの化粧水は・・・}}
+          </h3>
+
+          <div class="product__block">
+            <div class="logo">
+              <img src="./img/logo_predia.jpg" alt="Predia Logo">
+            </div>
+
+            <img src="./img/Predia_blanc confort.png" alt="SPA et MER Blanc confort" class="product-img">
+
+            <div class="product__description">
+              <h3>
+                <span class="font-josefin">SPA et MER <br> BLANC CONFORT</span>
+              </h3>
+              <h3>
+                スパ・エ・メール <br>ブラン コンフォール
+              </h3>
+              <p>
+                {{EN: <span class="font-josefin">A soothing toner helps to nourish, purify, soften and renew your
+                  complexion.<br>Good for:</span> <br> <span class="font-josefin">- Visible pores</span> <br> <span
+                  class="font-josefin">- Dullness and uneven texture</span> <br> <span class="font-josefin">- Acne
+                  and blemishes</span>||JP:海洋深層水＆ハトムギ水配合で、 肌あれ・ニキビ・くすみ※にも。
+                毛穴も目立ちにくい透明感に満ちた肌にみちびきます。
+                ニキビを防ぎ、肌あれ・日やけ後のほてりにも効果的◎}}
+              </p>
+            </div>
+          </div>
+
+          <div class="btns">
+            <label class="btn small-text">
+              <input type="submit" name="answer" value="SPA et MER Blanc confort" hidden />
+
+              {{EN: GET MY SAMPLE||JP:GET MY SAMPLE}}
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+  <script src="./libs/jquery/jquery-1.11.1.min.js"></script>
+  <script src="js/scripts.min.mkginza.js"></script>
+</body>
+
+</html>

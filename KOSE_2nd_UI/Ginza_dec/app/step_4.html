@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="google" content="notranslate" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Step 4</title>
+  <link rel="stylesheet" href="css/style.min.css" />
+</head>
+
+<body>
+  <main class="main-contact container step-4">
+    <div class="background"></div>
+
+    <div class="logo">
+      <img src="img/logo-kose.png" alt="" />
+    </div>
+
+    <div class="grid-position">
+      <div class="grid-position--top">
+
+        <form action="step_5.html" method="get" class="question">
+          <input type="hidden" name="question" data-question="question" value="How would you describe yourself?" />
+
+          <h3>
+            {{EN: How would you describe yourself?||JP: 最もあなたらしいのは？}}
+          </h3>
+
+          <div class="btns">
+
+            <label class="btn btn__card">
+              <input type="submit" name="answer" value="Cool & Sophisticated" hidden />
+
+              <img src="./img/Q2_1.jpg" alt="">
+              <p>
+                {{EN: Cool & Sophisticated||JP: 凛として洗練された}}
+              </p>
+            </label>
+
+            <label class="btn btn__card">
+              <input type="submit" name="answer" value="Lovely & Cheerful" hidden />
+
+              <img src="./img/Q2_2.jpg" alt="">
+              <p>
+                {{EN: Lovely & Cheerful||JP: 華やかで明るく可愛らしい}}
+              </p>
+            </label>
+
+            <label class="btn btn__card">
+              <input type="submit" name="answer" value="Classy & Mature" hidden />
+
+              <img src="./img/Q2_3.jpg" alt="">
+              <p>
+                {{EN: Classy & Mature||JP: 上品で大人っぽい}}
+              </p>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/scripts.min.js"></script>
+</body>
+
+</html>

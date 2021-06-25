@@ -1,0 +1,66 @@
+@import url(./default.less);
+
+.transition(@element: all, @time: .2s, @function: linear ) {
+	transition: @element @time @function;
+}
+.text-center{
+	text-align: center;
+}
+
+.show {
+	display: block !important;
+}
+
+.hide {
+	display: none !important;
+}
+
+.fs-27 {
+	font-size: 27px !important;
+	line-height: 170% !important;
+}
+
+.fs-25 {
+	font-size: 25px !important;
+	line-height: 170% !important;
+}
+
+.fs-24 {
+	font-size: 24px !important;
+	line-height: 170% !important;
+}
+
+.fs-22 {
+	font-size: 22px !important;
+	line-height: 170% !important;
+}
+
+.font-josefin {
+	font-family: @base_font;
+}
+
+.w-100 {
+	width: 100% !important;
+}
+
+@media screen and (max-width: 560px) {
+	.fs-27 {
+		font-size: 16px !important;
+		line-height: 130% !important;
+	}
+	
+	.fs-25 {
+		font-size: 16px !important;
+		line-height: 130% !important;
+	}
+	
+	.fs-24 {
+		font-size: 16px !important;
+		line-height: 130% !important;
+	}
+	
+	.fs-22 {
+		font-size: 16px !important;
+		line-height: 130% !important;
+	}
+}

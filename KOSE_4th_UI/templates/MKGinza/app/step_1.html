@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="google" content="notranslate" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Step 1</title>
+  <link rel="stylesheet" href="css/style.min.css" />
+</head>
+
+<body>
+  <main class="main-contact container step-1">
+    <div class="background"></div>
+    <div>
+      <div class="logo">
+        <img src="img/logo-kose.png" alt="logo" />
+      </div>
+
+      <form action="step_2.html" method="get">
+        <input type="hidden" name="question" value="Language" />
+
+        <h2>
+          言語を選択してください。
+        </h2>
+
+        <h3>
+          Please choose your language.
+        </h3>
+
+        <div class="btns column">
+          <label class="btn">
+            <input type="submit" name="answer" value="JP" hidden="" />
+
+            {{JP: 日本語 }}
+          </label>
+
+          <label class="btn">
+            <input type="submit" name="answer" value="EN" hidden="" />
+
+            {{EN: English}}
+          </label>
+        </div>
+      </form>
+    </div>
+  </main>
+  <script src="./libs/jquery/jquery-1.11.1.min.js"></script>
+  <script src="js/scripts.min.2604.js"></script>
+</body>
+
+</html>

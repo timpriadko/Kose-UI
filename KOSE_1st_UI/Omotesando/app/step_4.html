@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="google" content="notranslate" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Step 4</title>
+  <link rel="stylesheet" href="css/style.min.css" />
+</head>
+
+<body>
+  <main class="main-contact container step-4">
+    <div class="background"></div>
+
+    <div class="logo">
+      <img src="img/logo-kose.png" alt="" />
+    </div>
+
+    <div class="grid-position">
+      <div class="grid-position--top">
+
+        <form action="step_5.html" method="get" class="question">
+          <input type="hidden" name="question" value="What is your favorite drink?" />
+
+          <h3>
+            {{EN: What is your favorite drink?||JP: 好きなドリンクは？||CH: 您喜欢的饮品？}}
+          </h3>
+
+          <div class="btns">
+
+            <label class="btn btn__card">
+              <input type="submit" name="answer" value="Tea" hidden />
+
+              <img src="./img/2-1.jpg" alt="">
+              <p>
+                {{EN: Tea||JP: 紅茶||CH: 红茶}}
+              </p>
+            </label>
+
+            <label class="btn btn__card">
+              <input type="submit" name="answer" value="Coffee" hidden />
+
+              <img src="./img/2-2.jpg" alt="">
+              <p>
+                {{EN: Coffee||JP: コーヒー||CH: 咖啡}}
+              </p>
+            </label>
+
+            <label class="btn btn__card">
+              <input type="submit" name="answer" value="Wine" hidden />
+
+              <img src="./img/2-3.jpg" alt="">
+              <p>
+                {{EN: Wine||JP: ワイン||CH: 红酒}}
+              </p>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/scripts.min.js"></script>
+</body>
+
+</html>

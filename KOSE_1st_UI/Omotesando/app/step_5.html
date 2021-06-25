@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="google" content="notranslate" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Step 5</title>
+  <link rel="stylesheet" href="css/style.min.css" />
+  <link rel="icon" href="img/favicon-16x16.png" type="image/x-icon">
+</head>
+
+<body>
+  <main class="main-contact container step-5">
+    <div class="background"></div>
+
+    <div class="logo">
+      <img src="img/logo-kose.png" alt="" />
+    </div>
+
+    <div class="grid-position">
+      <div class="grid-position--top">
+
+        <form action="step_5-animation.html" method="get" class="question">
+          <input type="hidden" data-question="question" data-last="last_question" name="question"
+            value="How often should you text your partner?" />
+
+          <h3 class="to-hide">
+            {{EN: How often should you text your partner?||JP:好きな人と連絡を取りたい頻度は？||CH: 您和喜欢的人多久联系一次？}}
+          </h3>
+
+          <h3 class="hide to-show analysis-text">
+            {{EN: Thank you for participating! <br> We are now analyzing your result to find your perfect match with our
+            selected fragrances.||JP:ご参加ありがとうございます！ <br>あなたにぴったりの香りをお選びしています。||CH: "谢谢您的参与。 <br> 我们将为您选择与您最匹配的香型。 }}
+          </h3>
+
+          <div class="analysis-bar-block hide to-show">
+            <p class="back">
+              {{EN:<span class="font-josefin">Analysing</span>||JP:診断中||CH: 诊断中"}}
+            </p>
+            <div class="analysis-bar-wrap">
+              <div class="analysis-bar">
+                <p class="front">
+                  {{EN:<span class="font-josefin">Analysing</span>||JP:診断中||CH: 诊断中"}}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="btns to-hide">
+
+            <label class="btn btn__card">
+              <input name="answer" value="Everyday" hidden />
+
+              <img src="./img/3-1.jpg" alt="">
+              <p>
+                {{EN: Everyday||JP: 毎日||CH: 每天}}
+              </p>
+            </label>
+
+            <label class="btn btn__card">
+              <input name="answer" value="Every other day" hidden />
+
+              <img src="./img/3-2.jpg" alt="">
+              <p>
+                {{EN: Every other day||JP: 2日に1回||CH: 两天联系一次}}
+              </p>
+            </label>
+
+            <label class="btn btn__card">
+              <input name="answer" value="When I feel like it" hidden />
+
+              <img src="./img/3-3.jpg" alt="">
+              <p>
+                {{EN: When I feel like it||JP: 気が向いたとき||CH: 想要联系的时候}}
+              </p>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/scripts.min.js"></script>
+</body>
+
+</html>

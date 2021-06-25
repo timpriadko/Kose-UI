@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="google" content="notranslate" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Step 3</title>
+  <link rel="stylesheet" href="css/style.min.css" />
+</head>
+
+<body>
+  <main class="main-contact bg-3 container">
+    <div class="background"></div>
+
+    <div class="logo">
+      <img src="img/logo-kose.png" alt="" />
+    </div>
+
+    <div class="grid-position">
+      <div class="grid-position--top">
+
+        <form action="step_4.html" method="get" class="question question__column-2">
+          <input type="hidden" name="question" data-question="question"
+            value="Which most closely describes your skin doncition?" />
+
+          <ul class="step-num-block">
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+          </ul>
+
+          <h3>
+            {{EN: Which most closely describes your skin doncition?||JP: 現在の肌状態で最も当てはまるのは？}}
+          </h3>
+
+          <div class="btns">
+
+            <label class="btn btn__card">
+              <input type="submit" name="answer" value="Pores emphasized by wearing makeup" hidden />
+
+              <img src="./img/Q2_1.jpg" alt="Pores emphasized by wearing makeup">
+              <p>
+                {{EN: Pores emphasized by wearing makeup||JP: メイクすると毛穴が目立つ}}
+              </p>
+            </label>
+
+            <label class="btn btn__card">
+              <input type="submit" name="answer" value="My skin feels tight after washing" hidden />
+
+              <img src="./img/Q2_2.jpg" alt="My skin feels tight after washing">
+              <p>
+                {{EN: My skin feels tight after washing||JP: 洗顔後お肌がつっぱる}}
+              </p>
+            </label>
+
+            <label class="btn btn__card">
+              <input type="submit" name="answer" value="My face looks dull in the evening" hidden />
+
+              <img src="./img/Q2_3.jpg" alt="My face looks dull in the evening">
+              <p>
+                {{EN: My face looks dull in the evening||JP: 夕方になるとくすむ}}
+              </p>
+            </label>
+
+            <label class="btn btn__card">
+              <input type="submit" name="answer" value="My skin feels itchy when applying toner" hidden />
+
+              <img src="./img/Q2_1.jpg" alt="My skin feels itchy when applying toner">
+              <p>
+                {{EN: My skin feels itchy when applying toner||JP: 化粧水がしみる}}
+              </p>
+            </label>
+
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+  </main>
+  <script src="./libs/jquery/jquery-1.11.1.min.js"></script>
+  <script src="js/scripts.min.js"></script>
+</body>
+
+</html>

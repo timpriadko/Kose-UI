@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="google" content="notranslate" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Step 4</title>
+  <link rel="stylesheet" href="css/style.min.css" />
+</head>
+
+<body>
+  <main class="main-contact container step-4">
+    <div class="background"></div>
+
+    <div class="logo">
+      <img src="img/logo-kose.png" alt="" />
+    </div>
+
+    <div class="grid-position">
+      <div class="grid-position--top">
+
+        <form action="step_5.html" method="get" class="question question__column-2">
+          <input type="hidden" name="question" data-question="question"
+            value="What's your game plan while staying home?" />
+
+          <h3>
+            {{EN: What's your game plan while staying home?||JP: おうち時間はどう過ごしたい？}}
+          </h3>
+
+          <ul class="step-num-block">
+            <li>1</li>
+            <li class="active">2</li>
+            <li>3</li>
+            <li>4</li>
+          </ul>
+
+          <div class="btns">
+
+            <label class="btn btn__card">
+              <input type="submit" name="answer" value="Enjoy being foodie" hidden />
+
+              <img src="./img/Q2_1.jpg" alt="Enjoy being foodie">
+              <p>
+                {{EN: Enjoy being foodie||JP: おいしいグルメ＆お酒ざんまい}}
+              </p>
+            </label>
+
+            <label class="btn btn__card">
+              <input type="submit" name="answer" value="Sleep all day" hidden />
+
+              <img src="./img/Q2_2.jpg" alt="Sleep all day">
+              <p>
+                {{EN: Sleep all day||JP: ひたすら寝る}}
+              </p>
+            </label>
+
+            <label class="btn btn__card">
+              <input type="submit" name="answer" value="Having relaxing bath time" hidden />
+
+              <img src="./img/Q2_3.jpg" alt="Having relaxing bath time">
+              <p>
+                {{EN: Having relaxing bath time||JP: 優雅なバスタイム}}
+              </p>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </main>
+  <script src="./libs/jquery/jquery-1.11.1.min.js"></script>
+  <script src="js/scripts.min.mkginza.js"></script>
+</body>
+
+</html>

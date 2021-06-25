@@ -1,0 +1,169 @@
+@import url(./default.less);
+
+.main-contact.promocode-page {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, #FFFFFF 100%);
+    h3 {
+        max-width: 841px;
+        margin: 55px auto 0;
+        font-family: @third_font;
+        font-weight: bold;
+        font-size: 37px;
+        line-height: 48px;
+        letter-spacing: -0.5px;
+    }
+
+    .qr-block {
+        h5 {
+            margin-top: 31px;
+        }
+
+        .qr-code {
+            margin-top: 17px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                max-width: 218px;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+
+    // .steps {
+    //     & + .keyboard {
+    //         margin-top: 84px;
+    //     }
+    // }
+
+    .btns {
+        margin-top: 55px;
+    }
+    
+    .keyboard {
+        h5, h3 {
+          display: none;
+        }
+
+        &.keyboard-email {
+            input {
+                text-transform: none;
+                font-size: 36px;
+                line-height: 130%;
+                padding: 34px 10px;
+                &::placeholder {
+                    color: #B0B0B0;
+                    font-size: 36px;
+                    line-height: 130%;
+                    text-align: center;
+                }
+            }
+
+            h3 {
+                margin-top: 147px;
+            }
+        }
+    }
+
+    &.keyboard-email-active,
+    &.keyboard-promo-active {
+        .qr-block,
+        .btns,
+        .steps {
+            display: none;
+        }
+
+        .keyboard {
+            h5, h3 {
+                display: block;
+            }
+            h5 {
+                font-weight: 500;
+            }
+        }
+
+        .checkboxes {
+            display: none;
+        }
+    }
+
+    &.keyboard-promo-active {
+        .keyboard-email {
+            display: none;
+        }
+
+        .keyboard-promo {
+            input {
+                margin-top: 20px;
+            }
+
+            h5 {
+                &:nth-of-type(1) {
+                    margin-top: 85px;
+                }
+                &:nth-of-type(2) {
+                    max-width: 700px;
+                    margin: 21px auto 0;
+                }
+            }
+
+            .ui-keyboard {
+                top: 0px !important;
+                margin-top: 39px;
+            }
+        }
+    }
+
+    &.keyboard-email-active {
+        .keyboard-promo {
+            display: none;
+        }
+
+        form {
+            & > h3 {
+                display: none;
+            }
+        }
+
+        .keyboard-email {
+            input {
+                margin-top: 142px;
+            }
+
+            .ui-keyboard {
+                top: 0px !important;
+                margin-top: 147px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .main-contact.promocode-page {
+        h3 {
+            margin-top: 30px;
+            font-size: 27px;
+            line-height: 130%;
+        }
+    
+        .keyboard {
+            &.keyboard-email {
+                input {
+                    &::placeholder {
+                        font-size: 13px;
+                        line-height: 120%;
+                    }
+                }
+            }
+        }
+
+        .btns {
+            margin-top: 20px;
+
+            .btn {
+                margin: 0;
+            }
+        }
+    }
+}

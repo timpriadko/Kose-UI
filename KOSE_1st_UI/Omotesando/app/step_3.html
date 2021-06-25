@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="google" content="notranslate" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Step 3</title>
+  <link rel="stylesheet" href="css/style.min.css" />
+</head>
+
+<body>
+  <main class="main-contact step-3 container">
+    <div class="background"></div>
+
+    <div class="logo">
+      <img src="img/logo-kose.png" alt="" />
+    </div>
+
+    <div class="grid-position">
+      <div class="grid-position--top">
+
+        <form action="step_4.html" method="get" class="question">
+          <input type="hidden" name="question" value="What is your age group?" />
+
+          <h3>
+            {{EN: What is your age group?||JP: あなたの年齢を教えてください||CH: 请选择您的年龄。}}
+          </h3>
+
+          <div class="btns btns__md column">
+
+            <label class="btn btn__md">
+              <input type="submit" name="answer" value="~ 18" hidden />
+
+              {{EN: ~ 18}}
+            </label>
+
+            <label class="btn btn__md">
+              <input type="submit" name="answer" value="18 ~ 24" hidden />
+
+              {{EN: 18 ~ 24}}
+            </label>
+
+            <label class="btn btn__md">
+              <input type="submit" name="answer" value="25 ~ 29" hidden />
+
+              {{EN: 25 ~ 29}}
+            </label>
+
+            <label class="btn btn__md">
+              <input type="submit" name="answer" value="30 ~ 39" hidden />
+
+              {{EN: 30 ~ 39}}
+            </label>
+
+            <label class="btn btn__md">
+              <input type="submit" name="answer" value="40 ~ 49" hidden />
+
+              {{EN: 40 ~ 49}}
+            </label>
+
+            <label class="btn btn__md">
+              <input type="submit" name="answer" value="50 ~ 59" hidden />
+
+              {{EN: 50 ~ 59}}
+            </label>
+
+            <label class="btn btn__md">
+              <input type="submit" name="answer" value="60 ~" hidden />
+
+              {{EN: 60 ~}}
+            </label>
+          </div>
+        </form>
+      </div>
+
+      <div class="grid-position--bottom">
+      </div>
+
+    </div>
+
+  </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/scripts.min.js"></script>
+</body>
+
+</html>

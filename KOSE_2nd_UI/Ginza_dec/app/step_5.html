@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="google" content="notranslate" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Step 5</title>
+  <link rel="stylesheet" href="css/style.min.css" />
+  <link rel="icon" href="img/favicon-16x16.png" type="image/x-icon">
+</head>
+
+<body>
+  <main class="main-contact container step-5">
+    <div class="background"></div>
+
+    <div class="logo">
+      <img src="img/logo-kose.png" alt="" />
+    </div>
+
+    <div class="grid-position">
+      <div class="grid-position--top">
+
+        <form action="step_5-animation.html" method="get" class="question">
+          <input type="hidden" data-question="question" data-last="last_question" name="question"
+            value="Which do you value the most in your life?" />
+
+          <h3 class="to-hide">
+            {{EN: Which do you value the most in your life?||JP:あなたにとって大切な時間は？}}
+          </h3>
+
+          <div class="btns to-hide">
+
+            <label class="btn btn__card">
+              <input type="submit" name="answer" value="Time spent studying or working" hidden />
+
+              <img src="./img/Q3_1.jpg" alt="">
+              <p>
+                {{EN: Time spent studying or working||JP: 勉強や仕事をしているとき}}
+              </p>
+            </label>
+
+            <label class="btn btn__card">
+              <input type="submit" name="answer" value="Quality time with loved ones and friends" hidden />
+
+              <img src="./img/Q3_2.jpg" alt="">
+              <p>
+                {{EN: Quality time with loved ones and friends||JP: 恋人や家族・友達と過ごす時間}}
+              </p>
+            </label>
+
+            <label class="btn btn__card">
+              <input type="submit" name="answer" value="When devoting myself to a hobby" hidden />
+
+              <img src="./img/Q3_3.jpg" alt="">
+              <p>
+                {{EN: When devoting myself to a hobby||JP: 趣味や好きなことに没頭しているとき}}
+              </p>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/scripts.min.js"></script>
+</body>
+
+</html>
